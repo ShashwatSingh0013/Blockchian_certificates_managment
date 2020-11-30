@@ -7,9 +7,17 @@ import datetime
 from flask import Flask, request , jsonify
 from urllib.parse import urlparse
 import requests
+'''
+name = "Shashwat"
 
+@app.route('/')
+def index():
+   return render_template("index.html")
 
-
+@app.route('/about')
+def about():
+   return render_template("home.html",str(obj)=str(chain),name = name)
+'''
 app=Flask(__name__)
 
 
@@ -140,7 +148,7 @@ def add_block():
 
     response={'status':status}
     return jsonify(response), 200  
-app.run(host = '0.0.0.0', port = 5000)
+app.run()
 
 
 
